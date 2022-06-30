@@ -75,8 +75,8 @@ for (const key in data) {
       </div>
 
       <!-- X 버튼 -->
-      <button class="btn btn-square btn-outline absolute bottom-8 right-8 border-gray-200" @click="deleteItem(id), repage()">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-gray-400 dark:hover:stroke-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      <button class="btn btn-square btn-outline absolute bottom-3 2xl:top-3 right-3 border-0 hover:bg-inherit" @click="deleteItem(id), repage()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-black dark:stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
       </button>
     </div>
   </div>

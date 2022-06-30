@@ -40,8 +40,10 @@ watch(saveCart, () => {
 })
 
 // created
-if (localStorage.getItem('theme') === 'dark') checked.value = true
-else if (localStorage.getItem('theme') === 'light') checked.value = false
+if (localStorage.getItem('theme')) {
+  if (localStorage.getItem('theme') === 'dark') checked.value = true
+  else if (localStorage.getItem('theme') === 'light') checked.value = false
+} else checked.value = false;
 redIcon();
 </script>
 

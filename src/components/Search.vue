@@ -13,9 +13,14 @@ const all = computed(() => {
 
 const search = (e) => {
   let input = e.target.value;
-  result.value = all.value.filter((item) => {
-    return item.title.toLowerCase().indexOf(input.toLowerCase()) > -1
-  });
+  if (e.target.value === '') {
+    reset.value = '',
+    result.value = []
+  } else if (e.target.value !== '') {
+    result.value = all.value.filter((item) => {
+      return item.title.toLowerCase().indexOf(input.toLowerCase()) > -1
+    });
+  }
 }
 
 const openClose = () => {
@@ -33,7 +38,7 @@ const openClose = () => {
       class="input max-w-xs bg-gray-300 flex-none ml-5 mr-1 dark:text-white dark:bg-gray-600 focus:outline-0"
       @input="search"
     />
-    <ul tabindex="0" class="dropdown-content menu shadow bg-base-100 w-full flex-none ml-5 dark:text-white left-0 mt-2 max-h-96 overflow-y-auto">
+    <ul class="dropdown-content menu shadow bg-base-100 w-full flex-none ml-5 dark:text-white left-0 mt-2 max-h-96 overflow-y-auto">
       <li v-for="{ id, title } in result" :key="id" @click="openClose">
         <RouterLink :to="'/product/' + id">
           <span class="line-clamp-2">{{ title }}</span>
