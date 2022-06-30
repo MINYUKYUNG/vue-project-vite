@@ -38,8 +38,7 @@ export default {
 
   actions: {
     async getData(context) {
-      // const result = await axios.get('https://fakestoreapi.com/products');
-      const result = await axios.get('https://vue-shop-oinochoe.vercel.app/products.json');
+      const result = await axios.get('https://fakestoreapi.com/products');
       
       const data = result.data;
       context.commit('setState', {

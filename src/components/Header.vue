@@ -21,7 +21,7 @@ const redIcon = () => {
   }
 }
 
-watch(checked, () => {
+const lightDark = () => {
   const documentEl = window.document.documentElement;
   if (checked.value === false) {
     documentEl.dataset.theme = 'light';
@@ -32,7 +32,9 @@ watch(checked, () => {
     documentEl.classList.add('dark');
     localStorage.setItem('theme', 'dark');
   }
-})
+}
+
+watch(checked, lightDark)
 
 watch(saveCart, () => {
   numberCart.value = 0;
@@ -42,8 +44,8 @@ watch(saveCart, () => {
 // created
 if (localStorage.getItem('theme')) {
   if (localStorage.getItem('theme') === 'dark') checked.value = true
-  else if (localStorage.getItem('theme') === 'light') checked.value = false
-} else checked.value = false;
+  else if (localStorage.getItem('theme') === 'light') lightDark();
+} else lightDark();
 redIcon();
 </script>
 
