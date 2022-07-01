@@ -39,7 +39,7 @@ const toPr = () => {
 
 // created
 (async () => {
-  await axios.get('https://vue-shop-oinochoe.vercel.app/products.json');
+  await axios.get('https://fakestoreapi.com/products');
   store.commit('cart/loadCart')
 })();
 </script>
