@@ -1,7 +1,29 @@
-# Vue 3 + Vite
+# vue-project
+- Vue3 (Composition API) + Vite + JS
+- Vuex + Vue Router
+- CSS Framwork: tailwindcss, daisyui
+- Axios API
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## About project
+- Composition API로 파일 구성을 한, Vue.js 온라인 쇼핑몰 프로젝트
 
-## Recommended IDE Setup
+- Light Mode
+[![light](./src/assets/light%20ver.png)](https://vue-project-vite.vercel.app/)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- Dark Mode
+[![dark](./src/assets/dark%20ver.png)](https://vue-project-vite.vercel.app/)
+
+### Project setup
+```
+npm install
+```
+
+### Project test
+```
+npm run dev
+```
+
+### Project build
+```
+npm run build
+```
