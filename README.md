@@ -1,4 +1,4 @@
-# vue-project-vite-ts
+# vue-project-vite
 - Vue3 (Composition API) + Vite + JS
 - Vuex + Vue Router
 - CSS Framwork: tailwindcss, daisyui
